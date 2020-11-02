@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -11,16 +11,21 @@
 	#loginbtn{
 		border-radius: 10px; width: 80px; background-color: #6FCF97; border: 0px; height: 25px; color: white;
 	}
+	#logoutbtn{
+		border-radius: 10px; width: 80px; background-color: #6FCF97; border: 0px; height: 25px; color: white;
+	}
+	
 </style>
 </head>
 <body>
 	<header>
 		<div style="float: right; margin-right: 20px;">
-			<c:if test="${member == null }">
-				<button id="loginbtn">·Î±×ÀÎ</button>
+			<c:if test="${loginUser == null }">
+				<button id="loginbtn">ë¡œê·¸ì¸</button>
 			</c:if>
-			<c:if test="${member != null }">	
-				<button>·Î±×ÀÎ¿Ï·á</button>
+			<c:if test="${loginUser != null }">
+				<span style="font-size: 15px;">${loginUser.userName}ë‹˜</span>
+				<button id="logoutbtn">ë¡œê·¸ì•„ì›ƒ</button>
 			</c:if>
 			<img src="resources/icon/alert.png" style="height: 20px;">
 		</div>

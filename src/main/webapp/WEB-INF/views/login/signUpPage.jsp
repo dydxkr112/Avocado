@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 		margin-right: 31px;
 		margin-left: 31px;
 	}
-	#phone{
+	#phone1{
 		width: 115px; 
 		height: 44px; 
 		font-size: 12px; 
@@ -55,59 +55,60 @@
 </style>
 </head>
 <body>
+<form method="post" action="insertMember.mem">
 <div align="center" style="margin-top: 60px;">
 		<img src="resources/images/mainLogo.png" style="height: 70px;">
 		<br>
 		<table>
 			<tr>
 				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 50px;">
-					¾ÆÀÌµğ
+					ì•„ì´ë””
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä" class="inputs"> 
+					<input type="text" placeholder="ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”" class="inputs" name="userId"> 
 					<br>
 				</td>
 			</tr>
 			<tr>
-				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ºñ¹Ğ¹øÈ£</td>
+				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ë¹„ë°€ë²ˆí˜¸</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä" class="inputs"> 
+					<input type="text" placeholder="ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”" class="inputs" name="userPwd"> 
 				</td>
 			</tr>
 			
 			<tr>
 				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">
-					ºñ¹Ğ¹øÈ£ È®ÀÎ
+					ë¹„ë°€ë²ˆí˜¸ í™•ì¸
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="ºñ¹Ğ¹øÈ£À» ÇÑ¹ø´õ ÀÔ·ÂÇÏ¼¼¿ä" class="inputs"> 
+					<input type="text" placeholder="ë¹„ë°€ë²ˆí˜¸ì„ í•œë²ˆë” ì…ë ¥í•˜ì„¸ìš”" class="inputs"> 
 					<br>
 				</td>
 			</tr>
 			<tr>
-				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ÀÌ¸§</td>
+				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ì´ë¦„</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä" class="inputs"> 
+					<input type="text" placeholder="ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”" class="inputs" name="userName"> 
 				</td>
 			</tr>
 			<tr>
 				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">
-					»ı³â¿ùÀÏ
+					ìƒë…„ì›”ì¼
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="³â(4ÀÚ)" class="inputs2"> 
+					<input id="year" type="text" placeholder="ë…„(4ì)" class="inputs2"> 
 					<select id="month">
-						<option selected disabled hidden>¿ù</option>
+						<option selected disabled hidden>ì›”</option>
 						<option>01</option>
 						<option>02</option>
 						<option>03</option>
@@ -121,59 +122,79 @@
 						<option>11</option>
 						<option>12</option>
 					</select>
-					<input type="text" placeholder="ÀÏ" class="inputs2"> 
+					<input type="text" placeholder="ì¼" class="inputs2" id="day"> 
 					<br>
 				</td>
 			</tr>
 			<tr>
 				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">
-					¼ºº°
+					ì„±ë³„
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
 					<select id="gender">
-						<option selected disabled hidden>¼±ÅÃÇØÁÖ¼¼¿ä.</option>
-						<option>³²</option>
-						<option>¿©</option>
+						<option selected disabled hidden>ì„ íƒí•´ì£¼ì„¸ìš”.</option>
+						<option>ë‚¨</option>
+						<option>ì—¬</option>
 					</select>
 					<br>
 				</td>
 			</tr>
 			<tr>
 				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">
-					ÈŞ´ëÆù ¹øÈ£
+					íœ´ëŒ€í° ë²ˆí˜¸
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<select id="phone">
+					<select id="phone1">
 						<option selected disabled hidden></option>
 						<option>010</option>
 						<option>011</option>
 						<option>017</option>
 						<option>019</option>
 					</select>
-					<input type="text" class="inputs2" style="margin-left: 33px; margin-right: 33px;"> 
-					<input type="text" class="inputs2"> 
+					<input type="text" class="inputs2" style="margin-left: 33px; margin-right: 33px;" id="phone2"> 
+					<input type="text" class="inputs2" id="phone3"> 
 					<br>
 				</td>
 			</tr>
 			<tr>
-				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ÁÖ¼Ò(µ¿)</td>
+				<td style="width:400px; font-size: 12px; font-weight: bold; padding-top: 15px;">ì£¼ì†Œ(ë™)</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 3px;">
-					<input type="text" placeholder="µ¿¸¸ ÀÔ·ÂÇÏ¼¼¿ä" class="inputs"> 
+					<input type="text" placeholder="ë™ë§Œ ì…ë ¥í•˜ì„¸ìš” ex) ì–‘ì¬ë™, ë„ê³¡ë™" class="inputs" name="userAddress"> 
 				</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 15px;">
-					<button class="signUpbtn">°¡ÀÔÇÏ±â</button>
+					<button class="signUpbtn">ê°€ì…í•˜ê¸°</button>
 				</td>
 			</tr>
 		</table>
 	</div>
+	<input type="hidden" name="userBirth" id="birth">
+	<input type="hidden" name="userPhone" id="phone">
+	<input type="hidden" name="userGender" id="realgender">
+	</form>
 	<jsp:include page="../common/footer.jsp"></jsp:include>
+	<script>
+		
+		$(document).on("change", "#year, #day, #month", function(){
+			var birth = $("#year").val() + "ë…„ " + $("#month").val() + "ì›” " + $("#day").val() + "ì¼";
+			$("#birth").val(birth);
+		})
+		
+		$(document).on("change", "#phone1, #phone2, #phone3", function(){
+			var phone = $("#phone1").val() + "-" + $("#phone2").val() + "-" + $("#phone3").val();
+			$("#phone").val(phone);
+		})
+		
+		$(document).on("change", "#gender", function(){
+			$("#realgender").val($("#gender").val());
+		});
+	</script>
 </body>
 </html>
