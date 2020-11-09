@@ -8,13 +8,13 @@
 <title>채팅</title>
 </head>
 <body>
- <script src="http://localhost:82/socket.io/socket.io.js"></script>
+ <script src="http://172.30.1.40:82/socket.io/socket.io.js"></script>
         <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-        <script>
+        <!-- <script>
             $(document).ready(function(){
                 var socket = io("http://localhost:82");
             });
-        </script>
+        </script> -->
 	<div class="chat-list-area">
 		<div class="title-area"></div>
 		<div class="chat-title-area">채팅</div>
@@ -34,7 +34,7 @@
 </body>
 <script>
             $(document).ready(function(){
-                var socket = io("http://localhost:82");
+                var socket = io('http://172.30.1.40:82');
                 
                 //msg에서 키를 누를떄
                 $("#msg").keydown(function(key){
@@ -55,7 +55,7 @@
                 
                 socket.on('send_msg', function(msg) {
                     //div 태그를 만들어 텍스트를 msg로 지정을 한뒤 #chat_box에 추가를 시켜준다.
-                    $('<div></div>').text(msg).appendTo("#chat_box");
+                    $('<div class="chat-box"></div>').text(msg).appendTo("#chat_box");
                 });
             });
             
