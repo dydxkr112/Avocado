@@ -25,6 +25,12 @@ public class MemberController {
 		return "login/signUpPage";
 	}
 	
+	//testmapping
+	@RequestMapping("test.mem")
+	public String testPage() {
+		return "login/testPage";
+	}
+	
 	@RequestMapping("insertMember.mem")
 	public String insertMember(Member m) {
 		System.out.println("Member M : " + m);

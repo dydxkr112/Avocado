@@ -28,11 +28,15 @@
 				<button id="logoutbtn">로그아웃</button>
 			</c:if>
 			<img src="resources/icon/alert.png" style="height: 20px;">
+			<button id="test">test</button>
 		</div>
 	</header>
 	<script>
 		$(document).on("click", "#loginbtn", function(){
 			location.href="loginMain.mem";
+		});
+		$(document).on("click", "#test", function(){
+			location.href="test.mem";
 		});
 	</script>
 </body>
