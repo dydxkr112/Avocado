@@ -170,7 +170,7 @@
 			</tr>
 			<tr>
 				<td style="padding-top: 15px;">
-					<button class="signUpbtn">가입하기</button>
+					<button type="button" class="signUpbtn">가입하기</button>
 				</td>
 			</tr>
 		</table>
@@ -179,7 +179,7 @@
 	<input type="hidden" name="userPhone" id="phone">
 	<input type="hidden" name="userGender" id="realgender">
 	</form>
-	<jsp:include page="../common/footer.jsp"></jsp:include>
+	<jsp:include page="../common/footer.jsp"/>
 	<script>
 		
 		$(document).on("change", "#year, #day, #month", function(){
@@ -195,6 +195,9 @@
 		$(document).on("change", "#gender", function(){
 			$("#realgender").val($("#gender").val());
 		});
+		
+		
+		
 	</script>
 </body>
 </html>
